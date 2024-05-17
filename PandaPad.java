@@ -17,6 +17,7 @@ import javax.swing.undo.UndoManager;
 
         undoManager= new UndoManager();
         JMenuBar menuBar= new JMenuBar();  
+        textArea = new JTextArea();
         menuBar.setBackground(Color.LIGHT_GRAY);
         
         JMenu fileMenu,editMenu, formatMenu, FontMenu, viewMenu, colorMenu, fontSizeMenu, aboutMenu, countMenu ;
@@ -176,10 +177,7 @@ import javax.swing.undo.UndoManager;
         menuBar.add(countMenu);
         menuBar.add(aboutMenu);
         
-
-        AreaPlus areaPlus= new AreaPlus();            //textarea
-        textArea = areaPlus; 
-        areaPlus.setForeground(Color.BLACK);
+        textArea.setForeground(Color.BLACK);        //textarea
         textArea.setFont(new Font("SansSerif", Font.PLAIN, 15));
         textArea.setMargin(new Insets(5, 5, 5, 5));
         textArea.setLineWrap(true);
